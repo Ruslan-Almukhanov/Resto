@@ -1,5 +1,6 @@
 # Resto
 Single Page Aplication by React.js
+///////////SETTING/////////////////
 steps to initialize the app
 1) run in terminal - npm install
 2) run in terminal - json-server src/db.json
