@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuList from '../menu-list';
+import {withRouter} from 'react-router-dom';
 
 const MainPage = () => {
     return (
@@ -7,4 +8,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage;
+export default withRouter(MainPage);
