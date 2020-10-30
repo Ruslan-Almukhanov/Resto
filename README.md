@@ -1,9 +1,26 @@
 # Resto
-Single Page Aplication by React.js
--
-steps to initialize the app
-1) run in terminal - npm install
-2) run in terminal - json-server src/db.json
-- it should open on http://localhost:3000
-3) run in a new terminal - npm run start
-- for correct displaying this window should open http://localhost:3001
+SPA для изучения и практики работы с React, Redux + unit тестирование. Загрузка данных из Json файла меню ресторана (имитация сервера).
+## Стек:
+JavaScript, React, Redux, Jest, react-testing-library
+## Компоненты и функциональность:
+**AppHeader** - отображение меню и общего счета выбраных бдюд
+
+**CartTable** - корзина товаров, возможность увеличения либо уменьшения количества товара, удаление товара
+
+**Error** - отображение ошибки
+
+**ItemDetails** - описание товара с кнопкой добаления в корзину
+
+**MenuList** - Fetch запрос к Json, выгрузка товаров в дочерний компонент
+
+**MenuListItem** - компонент товара, с добавлением в корзину 
+
+## Шаги для инициализации приложения:
+
+1. запустить в терминале команду `npm install`
+2. запустить в терминале команду `json-server src/db.json` с указанием пути до файла данных
+- сервер должен запуститься на хосте http://localhost:3000
+3. запустить в терминале команду `npm run start`
+- для коректного отображения приложения в браузере, надо запустить на хосте http://localhost:3001, так как порт 3000 занят `json-server` 
+
+
