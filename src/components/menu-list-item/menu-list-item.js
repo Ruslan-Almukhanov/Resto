@@ -17,7 +17,6 @@ class MenuListItem extends Component {
     
     render() {
         const {title, url, category, price, id} = this.props.menuItem;
-        console.log(this.props)
         const {addToCart} = this.props;
         const renderIcon = (category) => {
             switch (category) {
