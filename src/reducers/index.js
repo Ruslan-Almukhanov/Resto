@@ -36,17 +36,6 @@ const reducer = (state = initialState, action) => {
       const indexItem = state.items.findIndex(
         item => item.id === itemUnique.id
       );
-      let arrExtended = [];
-      const changeItems = (newItem) => {
-        return arrExtended = state.items.map(item =>
-          item
-            ? {
-              ...item,
-              newItem
-            }
-            : item
-        );
-      }
 
       // item was in basket
       if (indexItem >= 0) {
@@ -60,7 +49,14 @@ const reducer = (state = initialState, action) => {
           qtty: ++itemInState.qtty
         };
 
-        changeItems(newItem)
+        const arrExtended = state.items.map(item =>
+          item
+            ? {
+                ...item,
+                newItem
+              }
+            : item
+        );
 
         return {
           ...state,
@@ -100,13 +96,13 @@ const reducer = (state = initialState, action) => {
           priceTotal: (itemInState.priceTotal -= itemInMenuState.price),
           qtty: --itemInState.qtty
         };
-        
+
         const arrExtended = state.items.map(item =>
           item
             ? {
-              ...item,
-              newItem
-            }
+                ...item,
+                newItem
+              }
             : item
         );
 
